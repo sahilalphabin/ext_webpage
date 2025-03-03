@@ -99,7 +99,7 @@
 .hero p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #aaa;
+  color: var(--text-secondary);
   margin-bottom: 2rem;
   animation: fadeIn 1s ease-out 1s forwards;
   opacity: 0;
@@ -246,10 +246,12 @@
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
 }
 
 [data-theme="dark"] .code-preview {
   box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  background-color: #1a1a1a;
 }
 
 .code-preview:hover {

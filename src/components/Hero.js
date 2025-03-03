@@ -82,8 +82,8 @@ test('Assertions Demo', async ({ context }) => {
               ...tomorrow,
               'code[class*="language-"]': {
                 ...tomorrow['code[class*="language-"]'],
-                backgroundColor: '#f8f9fa',
-                color: '#495057'
+                backgroundColor: 'var(--code-background)',
+                color: 'var(--text-color)'
               },
               '.token.keyword': {
                 color: '#6f42c1'
@@ -105,7 +105,7 @@ test('Assertions Demo', async ({ context }) => {
             className="code-content"
             showLineNumbers
             customStyle={{
-              backgroundColor: '#f8f9fa',
+              backgroundColor: 'var(--code-background)',
               padding: '1.5rem'
             }}
           >
@@ -125,8 +125,8 @@ test('Assertions Demo', async ({ context }) => {
               ...tomorrow,
               'code[class*="language-"]': {
                 ...tomorrow['code[class*="language-"]'],
-                backgroundColor: '#f8f9fa',
-                color: '#495057'
+                backgroundColor: 'var(--code-background)',
+                color: 'var(--text-color)'
               },
               '.token.keyword': {
                 color: '#6f42c1'
@@ -148,7 +148,7 @@ test('Assertions Demo', async ({ context }) => {
             className="code-content"
             showLineNumbers
             customStyle={{
-              backgroundColor: '#f8f9fa',
+              backgroundColor: 'var(--code-background)',
               padding: '1.5rem'
             }}
           >
