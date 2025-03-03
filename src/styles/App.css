@@ -1,0 +1,119 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --text-secondary: #4d4d4d;
+  --text-tertiary: #666666;
+  --primary-color: #f5a623;
+  --secondary-color: #f5f5f5;
+  --border-color: #e0e0e0;
+  --card-background: #ffffff;
+  --card-border: #e0e0e0;
+  --code-background: #f8f8f8;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover-light: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --code-header-light: #2d2d2d;
+  --code-text-light: #f8f8f8;
+}
+
+[data-theme="dark"] {
+  --background-color: #0a0a0a;
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #999999;
+  --primary-color: #f5a623;
+  --secondary-color: #222222;
+  --border-color: #444444;
+  --card-background: #111111;
+  --card-border: #222222;
+  --code-background: #1a1a1a;
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --shadow-dark: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-hover-dark: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --code-header-dark: #1a1a1a;
+  --code-text-dark: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+.theme-toggle__within {
+  transition: transform 0.3s ease;
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .theme-toggle__within {
+  transform: rotate(180deg);
+}
+
+.theme-toggle-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .card {
+  box-shadow: var(--shadow-dark);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover-light);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: var(--shadow-hover-dark);
+} 
